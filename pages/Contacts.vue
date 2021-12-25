@@ -16,6 +16,15 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.main {
+  display: flex;
+  height: 400px;
+  background-color: #faf4e8;
+  align-items: center;
+  justify-content: center;
+}
+.main__title {
+  display: block;
+}
 </style>
