@@ -1,18 +1,16 @@
 <template>
   <main class="main">
-    <h1 class="main__title">
-       Страница контакты
-    </h1>
+    <h1 class="main__title">Страница контакты</h1>
   </main>
 </template>
 
 <script>
 export default {
-  name: "contacts",
+  name: 'Contacts',
 
   head: {
-    title: 'Контакты'
-  }
+    title: 'Контакты',
+  },
 };
 </script>
 

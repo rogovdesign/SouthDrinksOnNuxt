@@ -1,21 +1,17 @@
 <template>
   <main class="main">
-    <h1 class="main__title">
-       Страница продукта
-    </h1>
+    <h1 class="main__title">Страница продукта</h1>
   </main>
 </template>
 
 <script>
 export default {
-  name: "product",
+  name: 'Product',
 
   head: {
-    title: 'Продукты'
-  }
+    title: 'Продукты',
+  },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

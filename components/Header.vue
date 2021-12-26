@@ -12,45 +12,31 @@
           <nav>
             <ol class="header__nav">
               <li class="header__nav-item">
-                <nuxt-link
-                  class="link"
-                  to="/"
-                  exact-active-class="link-active"
+                <nuxt-link class="link" to="/" exact-active-class="link-active"
                   >О компании</nuxt-link
                 >
               </li>
               <li class="header__nav-item">
-                <nuxt-link
-                  class="link"
-                  to="/product"
-                  exact-active-class="link-active"
+                <nuxt-link class="link" to="/product" exact-active-class="link-active"
                   >Продукция</nuxt-link
                 >
               </li>
               <li class="header__nav-item">
-                <nuxt-link
-                  class="link"
-                  to="/contacts"
-                  exact-active-class="link-active"
+                <nuxt-link class="link" to="/contacts" exact-active-class="link-active"
                   >Контакты</nuxt-link
                 >
               </li>
             </ol>
           </nav>
-
         </div>
 
         <div class="header__right">
           <ol>
             <li class="header__nav-phone">
-              <a class="link__phone" href="tel:88616265015"
-                >8 (86162) 6-50-15</a
-              >
+              <a class="link__phone" href="tel:88616265015">8 (86162) 6-50-15</a>
             </li>
             <li class="header__nav-phone">
-              <a class="link__phone" href="tel:+79182893779"
-                >8 (918) 289-37-79</a
-              >
+              <a class="link__phone" href="tel:+79182893779">8 (918) 289-37-79</a>
             </li>
           </ol>
           <button class="header__button">Заказать звонок</button>
@@ -62,14 +48,14 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
 };
 </script>
 
 <style scoped lang="scss">
 .header-p {
   font-size: 18px;
-  font-family: "Raleway";
+  font-family: 'Raleway';
 }
 body {
   background-color: #faf5e9;
@@ -174,7 +160,7 @@ body {
 }
 
 .header__button {
-  font-family: "comfortaa";
+  font-family: 'comfortaa';
   padding: 20px 43px;
   background: linear-gradient(269.21deg, #ffd25a 0.49%, #ffc52b 100%);
   border-radius: 10px;
@@ -187,8 +173,7 @@ body {
   }
 
   &:active {
-    box-shadow: 0px 0px 15px rgba(255, 210, 90, 0.4),
-      inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 210, 90, 0.4), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
     transition-duration: 0s;
     background: linear-gradient(269.21deg, #ffd25a 0.49%, #ffc52b 100%);
   }
