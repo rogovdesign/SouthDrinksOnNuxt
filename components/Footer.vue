@@ -5,9 +5,10 @@
         <div class="footer__form-text">
           <h3 class="h3">Ждем ваших заказов</h3>
           <p class="footer__text">
-            Чтобы стать нашим клиентом, свяжитесь по телефону с нашими менеджерами либо оставьте
-            заявку на сайте. ООО «Кубань Агро-продукт» – ваш надежный производитель и поставщик
-            натуральных соков и напитков.
+            Чтобы стать нашим клиентом, свяжитесь по телефону с нашими
+            менеджерами либо оставьте заявку на сайте. ООО «Кубань Агро-продукт»
+            – ваш надежный производитель и поставщик натуральных соков и
+            напитков.
           </p>
         </div>
 
@@ -15,19 +16,27 @@
           <form @submit.prevent>
             <div class="form__align">
               <div class="form__align-row">
-                <input type="text" placeholder="Ваше имя" class="input input__up" />
-                <input type="text" placeholder="Номер телефона" class="input input__up" />
+                <input
+                  type="text"
+                  placeholder="Ваше имя"
+                  class="input input__up"
+                />
+                <input
+                  type="text"
+                  placeholder="Номер телефона"
+                  class="input input__up"
+                />
               </div>
-
-              <input type="text" placeholder="Комментарий" class="input input__down" />
-              <input type="text" placeholder="Комментарий" class="input input__down" />
-              <input type="text" placeholder="Комментарий" class="input input__down" />
+              <textarea rows="10" cols="45" name="text"  class="input input__down" placeholder="Комментарий"></textarea>
 
               <div class="form__checkbox-align">
-                <input type="checkbox" />
+                <input type="checkbox" v-model="toggle" class="checkbox"/>
                 <p>
-                  Даю согласие на обработку персональных данных и подтверждаю свое ознакомление с
-                  <a href="" class="link link__orange">политикой обработки персональных данных</a>
+                  Даю согласие на обработку персональных данных и подтверждаю
+                  свое ознакомление с
+                  <a href="" class="link link__orange"
+                    >политикой обработки персональных данных</a
+                  >
                   компании
                 </p>
               </div>
@@ -43,7 +52,7 @@
       <div class="container main__footer-container">
         <div class="main__footer-left">
           <nuxt-link to="/"
-            ><img src="~/assets/img/logo.png" alt="логотип" class="footer__logo"
+            ><img src="~/assets/img/logo.png" alt="" class="footer__logo"
           /></nuxt-link>
 
           <nav>
@@ -52,10 +61,14 @@
                 <nuxt-link class="link" to="/">О компании ></nuxt-link>
               </li>
               <li class="footer__nav-item">
-                <nuxt-link class="link" to="/product">Продукция ></nuxt-link>
+                <nuxt-link class="link" to="/product"
+                  >Продукция ></nuxt-link
+                >
               </li>
               <li class="footer__nav-item">
-                <nuxt-link class="link" to="/contacts">Контакты ></nuxt-link>
+                <nuxt-link class="link" to="/contacts"
+                  >Контакты ></nuxt-link
+                >
               </li>
             </ol>
           </nav>
@@ -66,7 +79,7 @@
               Краснодарский край,<br />
               г. Геленджик, ул. Кирова, 117
             </p>
-            <a href="" class="link">klohkonikita@mail.ru</a>
+            <p><a href="" class="link">klohkonikita@mail.ru</a></p>
           </div>
 
           <div class="footer__item1">
@@ -75,16 +88,21 @@
               Краснодарский край, Динской р-н,<br />
               ст. Динская, ул. Краснодарская, 15 а.
             </p>
-            <a href="" class="link">ooo_kap@mail.ru</a>
+            <p><a href="" class="link">ooo_kap@mail.ru</a></p>
+
           </div>
         </div>
         <div class="main__footer-right">
           <ol>
             <li class="footer__nav-phone">
-              <a class="link__phone" href="tel:88616265015">8 (86162) 6-50-15</a>
+              <a class="link__phone" href="tel:88616265015"
+                >8 (86162) 6-50-15</a
+              >
             </li>
             <li class="footer__nav-phone">
-              <a class="link__phone" href="tel:+79182893779">8 (918) 289-37-79</a>
+              <a class="link__phone" href="tel:+79182893779"
+                >8 (918) 289-37-79</a
+              >
             </li>
           </ol>
         </div>
@@ -102,11 +120,14 @@
 
 <script>
 export default {
-  name: 'Footer',
+  name: "Footer",
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped  lang="scss">
+
+
+
 .container {
   display: block;
   margin: 0 100px;
@@ -174,16 +195,29 @@ export default {
   font-family: raleway;
   font-size: 24px;
   line-height: 28px;
-
   color: #636363;
-}
-.input::placeholder {
-  font-family: raleway;
-  font-size: 24px;
-  line-height: 28px;
+  transition: 0.5s;
 
-  color: #d0cec4;
+  &:focus {
+    border: 1px solid #a1a1a1;
+  }
+  &::placeholder{
+    font-family: raleway;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #d0cec4;
+  }
 }
+.input__down {
+  height: 110px;
+}
+
+.checkbox{
+  height: 24px;
+  width: 24px;
+}
+
 
 .form__checkbox-align {
   display: flex;
@@ -196,7 +230,7 @@ export default {
 }
 
 .button {
-  font-family: 'comfortaa';
+  font-family: "comfortaa";
   padding: 20px 43px;
   background: linear-gradient(269.21deg, #ffd25a 0.49%, #ffc52b 100%);
   border-radius: 10px;
@@ -210,7 +244,8 @@ export default {
   }
 
   &:active {
-    box-shadow: 0px 0px 15px rgba(255, 210, 90, 0.4), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 210, 90, 0.4),
+      inset 0px 4px 4px rgba(0, 0, 0, 0.1);
     transition-duration: 0s;
     background: linear-gradient(269.21deg, #ffd25a 0.49%, #ffc52b 100%);
   }
@@ -303,4 +338,51 @@ export default {
 .footer__policy {
   color: #a9a9a9;
 }
+@media screen and (max-width: 1600px) {
+ .main__footer-container{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer__nav-phone{
+    display: inline-flex;
+    margin: 0 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+    .footer__container{
+     flex-direction: column;
+    }
+    .footer__form{
+      margin-top: 0px;
+    }
+    .main__footer-left{
+    flex-direction: column;
+    gap: 40px;
+  }
+  .h4,p,link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__down-container{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+.footer__nav-phone{
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {}
+@media screen and (max-width: 375px) {}
 </style>
